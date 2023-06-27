@@ -3,3 +3,95 @@
   padding: 0;
   margin: 0;
 }
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 5px 5px black;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: linear-gradient(60deg, #808080 50%, #111 50%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+h1 {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.series img {
+  border-radius: 10px;
+}
+
+.div-title i {
+  font-size: 1.2em;
+}
+
+.div-title i:hover {
+  cursor: pointer;
+}
+
+.span-icons button {
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.span-icons button:hover {
+  cursor: pointer;
+}
+
+#nav-list {
+  display: flex;
+  gap: 30px;
+}
+
+#tvShows {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  gap: 2rem;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 50px;
+}
+
+.series,
+.span-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.span-icons {
+  align-items: center;
+}
+
+#logo-img {
+  width: 100px;
+  border-radius: 50%;
+}
