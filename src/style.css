@@ -26,14 +26,39 @@ ul {
 }
 
 body {
-  background: linear-gradient(60deg, #fdec34 50%, #fdcb37 50%);
+  background: linear-gradient(60deg, #808080 50%, #111 50%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
+  color: white;
 }
 
 h1 {
   margin: 50px 0;
   text-align: center;
+}
+
+.series img {
+  border-radius: 10px;
+}
+
+.div-title i {
+  font-size: 1.2em;
+}
+
+.div-title i:hover {
+  cursor: pointer;
+}
+
+.span-icons button {
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.span-icons button:hover {
+  cursor: pointer;
 }
 
 #nav-list {
@@ -43,9 +68,10 @@ h1 {
 
 #tvShows {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: repeat(4, 25%);
   gap: 2rem;
   justify-content: center;
+  justify-items: center;
   margin-bottom: 50px;
 }
 
