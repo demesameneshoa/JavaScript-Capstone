@@ -3,3 +3,32 @@
   padding: 0;
   margin: 0;
 }
+
+body {
+  background: linear-gradient(60deg, #fdec34 50%, #fdcb37 50%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  text-align: center;
+}
+
+#tvShows {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.series,
+.span-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
