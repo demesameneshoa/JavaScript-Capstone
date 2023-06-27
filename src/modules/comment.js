@@ -3,9 +3,10 @@ const renderpopup = async (showid = 98) => {
   await fetch(`https://api.tvmaze.com/shows/${showid}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       container.innerHTML = `
+        <div class="blur"></div>
        <div class="comments-container">
+          <div><i class="fa-solid close fa-xmark"></i></div>
          <div class=info-wrapper>
          <div class="poster-container">
              <img src="${data.image.medium}" alt="" />
@@ -26,6 +27,11 @@ const renderpopup = async (showid = 98) => {
            </div> 
          
          </div>`;
+
+      const closeBtn = container.querySelector('.close');
+      closeBtn.addEventListener('click', () => {
+        container.innerHTML = '';
+      });
     });
 };
 

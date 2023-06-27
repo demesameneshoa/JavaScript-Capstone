@@ -98,4 +98,87 @@ h1 {
 
 /* Comments popup */
 
+.comment-popup-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 234234;
+}
 
+.comments-container {
+  width: 70%;
+  max-height: 100vh;
+  background-color: #171717;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: scroll;
+}
+
+.poster-container {
+  height: 300px;
+}
+
+.poster-container img {
+  height: 100%;
+}
+
+.details-container {
+  width: 100%;
+}
+
+.details-box {
+  width: 100%;
+  padding: 24px;
+  padding-top: 0;
+  line-height: 1.5;
+  height: 100%;
+}
+
+.details-box ul li {
+  list-style: disc;
+  margin-left: 14px;
+}
+
+.heading {
+  font-size: 32px;
+  padding: 2px 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 14px;
+}
+
+.normal {
+  font-size: 1rem;
+}
+
+.comments {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 12px;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.close {
+  cursor: pointer;
+  display: inline;
+  width: auto;
+}
+
+.blur {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}

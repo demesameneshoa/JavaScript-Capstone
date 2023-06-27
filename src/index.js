@@ -4,16 +4,14 @@ import logo from './assets/logo-white.png';
 import renderpopup from './modules/comment.js';
 
 document.getElementById('logo-img').setAttribute('src', logo);
-render();
+await render();
 
 // Comment popup
-
-const commentBtns = document.querySelectorAll('.fa-comment');
+const commentBtns = document.querySelectorAll('.comment-btn');
 
 commentBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    console.log(btn);
-    const { id } = btn.parentElement;
+    const { id } = btn.parentElement.parentElement;
     renderpopup(id);
-  })
-})
+  });
+});
