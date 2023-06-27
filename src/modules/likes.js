@@ -14,16 +14,14 @@ const countLikes = async (event) => {
   }
 };
 
-const retrieveLikes = async (id) => {
+const retrieveLikes = async () => {
   try {
-    const numberLikes = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FjhFMUdws0lCxR3eXCdS/likes', {
+    return await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FjhFMUdws0lCxR3eXCdS/likes', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
-    });
-    const totalLikes = numberLikes.find((obj) => obj.item_id === id);
-    return totalLikes.likes;
+    }).then((response) => response.json());
   } catch (error) {
     return error.message;
   }
