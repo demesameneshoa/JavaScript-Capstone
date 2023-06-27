@@ -182,7 +182,7 @@ h1 {
   cursor: pointer;
 }
 
-#reserve-button{
+#reserve-button {
   padding: 10px 20px;
   background-color: antiquewhite;
   color: black;
@@ -190,7 +190,9 @@ h1 {
   border-radius: 10px;
 }
 
-#name, #startdate, #enddate {
+#name,
+#startdate,
+#enddate {
   height: 1.8rem;
   margin-bottom: 0.5rem;
   width: 14rem;
