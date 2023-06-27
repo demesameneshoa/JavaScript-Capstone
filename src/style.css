@@ -13,6 +13,14 @@ header {
   box-shadow: 0 0 5px 5px black;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+}
+
 ul {
   list-style: none;
 }
@@ -38,6 +46,7 @@ h1 {
   grid-template-columns: 30% 30% 30%;
   gap: 2rem;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .series,
