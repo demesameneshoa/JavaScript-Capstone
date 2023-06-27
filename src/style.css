@@ -4,6 +4,19 @@
   margin: 0;
 }
 
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 5px 5px black;
+}
+
+ul {
+  list-style: none;
+}
+
 body {
   background: linear-gradient(60deg, #fdec34 50%, #fdcb37 50%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,7 +24,13 @@ body {
 }
 
 h1 {
+  margin: 50px 0;
   text-align: center;
+}
+
+#nav-list {
+  display: flex;
+  gap: 30px;
 }
 
 #tvShows {
@@ -31,4 +50,13 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.span-icons {
+  align-items: center;
+}
+
+#logo-img {
+  width: 100px;
+  border-radius: 50%;
 }
