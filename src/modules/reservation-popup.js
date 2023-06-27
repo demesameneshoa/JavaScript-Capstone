@@ -28,10 +28,10 @@ const reservpopup = async (showid = 98) => {
               <div class="forms">
                 <h3> Add a reservation </h3>
                 <form>
-                    <input type="text" id="Name" placeholder="Name"/> </br></br>
-                    <input type="text" id="startdate" placeholder="Start Date"/> </br></br>
-                    <input type="text" id="enddate" placeholder="End Date"/> </br></br>
-                    <button>Reserve</button>
+                    <input type="text" id="name" placeholder="Name"/></br>
+                    <input type="text" id="startdate" placeholder="Start Date"/></br>
+                    <input type="text" id="enddate" placeholder="End Date"/></br>
+                    <button id="reserve-button">Reserve</button>
                   </form>
               </div>
               <div class="existing-reservations">

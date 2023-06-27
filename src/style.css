@@ -181,3 +181,17 @@ h1 {
   font-size: x-large;
   cursor: pointer;
 }
+
+#reserve-button{
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#name, #startdate, #enddate {
+  height: 1.8rem;
+  margin-bottom: 0.5rem;
+  width: 14rem;
+}
