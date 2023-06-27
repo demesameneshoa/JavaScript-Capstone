@@ -28,15 +28,14 @@ const render = async () => {
     const showDiv = document.createElement('div');
     const posterImg = document.createElement('img');
     const titleH2 = document.createElement('h2');
-    const idP = document.createElement('p');
     const actorsP = document.createElement('p');
     const summaryP = document.createElement('p');
     const ratingP = document.createElement('p');
     const icons = document.createElement('span');
     posterImg.src = poster;
     titleH2.innerText = title;
-    idP.innerText = `ID: ${id}`;
     actorsP.innerText = `Actors: ${actors}`;
+    showDiv.id = `${id}`;
 
     ratingP.innerText = `Rating: ${rating}`;
     icons.innerHTML = `<button><i class="fa-regular fa-heart"></i> Like</button> 
@@ -47,7 +46,6 @@ const render = async () => {
 
     showDiv.appendChild(posterImg);
     showDiv.appendChild(titleH2);
-    showDiv.appendChild(idP);
     showDiv.appendChild(actorsP);
     showDiv.appendChild(summaryP);
     showDiv.appendChild(ratingP);
