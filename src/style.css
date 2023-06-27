@@ -97,24 +97,22 @@ h1 {
 }
 
 
-/*popup styling*/
+/* popup styling */
 
 #popup {
-  height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: center;
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #111;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #111;
 }
 
 .reservation-container {
@@ -123,7 +121,7 @@ h1 {
   background-color: #f8f8f8;
   padding: 12px;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   gap: 12px;
   color: #111;
 }

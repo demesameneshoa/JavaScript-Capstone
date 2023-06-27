@@ -1,10 +1,9 @@
 const container = document.getElementById('popup');
-const reservpopup = async (showid=98) => { 
-    await fetch(`https://api.tvmaze.com/shows/${showid}`)
-              .then((response) => response.json())
-              .then((data) => {
-                console.log (data);
-        container.innerHTML =`
+const reservpopup = async (showid = 98) => {
+  await fetch(`https://api.tvmaze.com/shows/${showid}`)
+    .then((response) => response.json())
+    .then((data) => {
+      container.innerHTML = `
         <div class="reservation-container">
         <span id="closeBtn" class="close-button">&times;</span>
           <div class=info-wrapper>
@@ -42,13 +41,13 @@ const reservpopup = async (showid=98) => {
               </div>
           </div>
           </div>`;
-          container.style.display = "block";
-              });
-          const closeBtn = document.getElementById("closeBtn");
-          closeBtn.addEventListener('click', (e) => {
-            e.preventDefault;
-            container.style.display = "none";
-          });
-  }
+      container.style.display = 'block';
+    });
+  const closeBtn = document.getElementById('closeBtn');
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    container.style.display = 'none';
+  });
+};
 
-  export default reservpopup;
+export default reservpopup;

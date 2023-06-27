@@ -1,4 +1,5 @@
 import reservpopup from './reservation-popup.js';
+
 const url = 'https://api.tvmaze.com/shows';
 
 // Fetches data from API
@@ -48,14 +49,14 @@ const render = async () => {
     showDiv.appendChild(icons);
     tvShowsDiv.appendChild(showDiv);
   });
-  const reserveBtn = document.querySelectorAll("#reserve");
-    reserveBtn.forEach (button => {
-      button.addEventListener ('click',(e) =>{
-        e.preventDefault;
-        const showid=button.parentElement.parentElement.getAttribute("id");
-        reservpopup(showid);
-      })
+  const reserveBtn = document.querySelectorAll('#reserve');
+  reserveBtn.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const showid = button.parentElement.parentElement.getAttribute('id');
+      reservpopup(showid);
     });
+  });
 };
 
 export default render;
