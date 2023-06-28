@@ -7,20 +7,7 @@ const getReservation = async (url) => {
   return data;
 };
 
-const addReservation = async (url,showid,user,startDate,endDate) => {
-  await fetch(url, {
-    method: 'POST', 
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify( {"item_id": showid,
-    "username": user,
-    "date_start": startDate,
-    "date_end": endDate}),
-})
- reservpopup(showid);
-}
-
+let addReservation;
 const container = document.getElementById('popup');
 const reservpopup = async (showid = 98) => {
   const involvementUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FjhFMUdws0lCxR3eXCdS/reservations?item_id=${showid}`;
@@ -76,18 +63,33 @@ const reservpopup = async (showid = 98) => {
     container.style.display = 'none';
   });
 
-  const reserveBtn = document.getElementById ('reserve-button');
-  reserveBtn.addEventListener ('click', (e) => {
+  const reserveBtn = document.getElementById('reserve-button');
+  reserveBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    const user = document.getElementById ('name');
-    const startDate = document.getElementById ('startdate');
-    const endDate = document.getElementById ('enddate');
-    if(user.value !==''&&startDate.value!==''&&endDate.value!=''){
-      const newurl="https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FjhFMUdws0lCxR3eXCdS/reservations/"
-      addReservation(newurl,showid,user.value,startDate.value,endDate.value);
+    const user = document.getElementById('name');
+    const startDate = document.getElementById('startdate');
+    const endDate = document.getElementById('enddate');
+    if (user.value !== '' && startDate.value !== '' && endDate.value !== '') {
+      const newurl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FjhFMUdws0lCxR3eXCdS/reservations/';
+      addReservation(newurl, showid, user.value, startDate.value, endDate.value);
     }
   });
+};
 
+addReservation = async (url, showid, user, startDate, endDate) => {
+  await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: showid,
+      username: user,
+      date_start: startDate,
+      date_end: endDate,
+    }),
+  });
+  reservpopup(showid);
 };
 
 export default reservpopup;
