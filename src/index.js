@@ -10,9 +10,11 @@ document.getElementById('logo-img').setAttribute('src', logo);
 await render();
 
 const heartIcons = document.querySelectorAll('.fa-heart');
-const spanItems = document.getElementById('items-count');
+const spanItems = document.querySelectorAll('.items-count');
 // Add the number of items in the span.
-spanItems.textContent = ` (${itemsCounter()})`;
+spanItems.forEach((span) => {
+  span.textContent = ` (${itemsCounter()})`;
+});
 
 heartIcons.forEach((icon) => icon.addEventListener('click', (event) => {
   countLikes(event);
