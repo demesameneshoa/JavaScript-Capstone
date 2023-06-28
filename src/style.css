@@ -118,6 +118,7 @@ h1 {
   flex-direction: column;
   gap: 12px;
   overflow-y: scroll;
+}
 
 /* popup styling */
 
