@@ -96,7 +96,7 @@ h1 {
   border-radius: 50%;
 }
 
-/* Comments popup */
+/* < Comments popup start */
 
 .comment-popup-container {
   height: 100vh;
@@ -182,3 +182,5 @@ h1 {
   backdrop-filter: blur(10px);
   z-index: -1;
 }
+
+/* Comment popup end > */

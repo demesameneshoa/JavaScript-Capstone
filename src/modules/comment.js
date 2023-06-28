@@ -1,8 +1,12 @@
+// renderpopup takes the data from API and inject the popup templete with that data
 const renderpopup = async (showid = 98) => {
   const container = document.getElementById('comment-popup-container');
+
+  // Fetch data from API
   await fetch(`https://api.tvmaze.com/shows/${showid}`)
     .then((response) => response.json())
     .then((data) => {
+      // Templete for the comment popup
       container.innerHTML = `
         <div class="blur"></div>
        <div class="comments-container">
@@ -25,9 +29,9 @@ const renderpopup = async (showid = 98) => {
              </div>
            </div> 
            </div> 
-         
          </div>`;
 
+      // Add click event to the comment popup close icon
       const closeBtn = container.querySelector('.close');
       closeBtn.addEventListener('click', () => {
         container.innerHTML = '';
