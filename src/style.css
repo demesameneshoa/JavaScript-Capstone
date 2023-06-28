@@ -217,8 +217,6 @@ h1 {
   z-index: -1;
 }
 
-/* Comment popup end > */
-
 .forms {
   display: grid;
   flex-direction: column;
