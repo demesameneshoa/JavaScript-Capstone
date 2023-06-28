@@ -1,3 +1,5 @@
+import reservpopup from './reservation-popup.js';
+
 const url = 'https://api.tvmaze.com/shows';
 
 // Fetches data from API
@@ -40,12 +42,20 @@ const render = async () => {
       &nbsp; 
       <button><i class="fa-regular fa-comment"></i> Comment</button>
       &nbsp; 
-      <button><i class="fa-regular fa-clock"></i> Reserve</button>`;
+      <button id="reserve"><i class="fa-regular fa-clock"></i> Reserve</button>`;
 
     showDiv.appendChild(posterImg);
     showDiv.appendChild(titleContainer);
     showDiv.appendChild(icons);
     tvShowsDiv.appendChild(showDiv);
+  });
+  const reserveBtn = document.querySelectorAll('#reserve');
+  reserveBtn.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const showid = button.parentElement.parentElement.getAttribute('id');
+      reservpopup(showid);
+    });
   });
 };
 
