@@ -160,12 +160,12 @@ h1 {
 .reservation-container {
   width: 50%;
   margin: auto;
-  background-color: #f8f8f8;
+  background-color: #171717;
   padding: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  color: #111;
+  color: #fff;
 }
 
 .poster-container {
@@ -260,4 +260,8 @@ h1 {
   height: 1.8rem;
   margin-bottom: 0.5rem;
   width: 14rem;
+}
+
+.close-button {
+  max-width: fit-content;
 }
