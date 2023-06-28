@@ -83,7 +83,7 @@ h1 {
 
 .div-title {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -94,4 +94,10 @@ h1 {
 #logo-img {
   width: 100px;
   border-radius: 50%;
+}
+
+.likes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
