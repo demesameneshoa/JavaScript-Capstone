@@ -36,7 +36,22 @@ const renderpopup = async (showid = 98) => {
              </div>
            </div> 
            </div> 
-           
+           <div class="comments">
+             <div class="forms">
+               <h3> Add a Comment </h3>
+               <form>
+                   <input class="input" placeholder="Name" type="text" id="name"/> </br></br>
+                   <textarea placeholder="Comment" class="input" name="comment" id="comment" cols="30" rows="7"></textarea>
+                   <button>Comment</button>
+                 </form>
+             </div>
+             <div class="existingcomments">
+                 <h2 class="heading">Comments(${comments.length})</h2>
+                 <ul>
+                 ${comments.map((tag) => `<li><span class="tag">${tag.creation_date} ${`${tag.username}: ${tag.comment}`}</span></li>`).join('')}
+                 </ul>
+             </div>
+         </div>
          </div>
          `;
 
