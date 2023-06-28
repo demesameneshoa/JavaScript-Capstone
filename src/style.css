@@ -154,14 +154,14 @@ h1 {
   color: #f8f8f8;
 }
 
-.addCommentBtn {
+.add-comment-btn {
   border: none;
   padding: 8px;
   color: #111;
   border-radius: 3px;
 }
 
-.addCommentBtn:hover {
+.add-comment-btn:hover {
   cursor: pointer;
   background-color: #ddd;
 }

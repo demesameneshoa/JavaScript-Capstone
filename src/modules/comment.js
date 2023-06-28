@@ -43,9 +43,9 @@ const renderpopup = async (showid = 98) => {
              <div class="forms">
                <h3 class="heading"> Add a Comment </h3>
                <form>
-                   <input class="input" placeholder="Name" type="text"/> </br></br>
-                   <textarea placeholder="Comment" class="input" name="comment" id="comment" cols="30" rows="7"></textarea>
-                   <button class="addCommentBtn">Comment</button>
+                   <input class="input username" placeholder="Name" type="text"/> </br></br>
+                   <textarea placeholder="Comment" class="input comment-message" name="comment" id="comment" cols="30" rows="7"></textarea>
+                   <button class="add-comment-btn">Comment</button>
                  </form>
              </div>
              <div class="existingcomments">
