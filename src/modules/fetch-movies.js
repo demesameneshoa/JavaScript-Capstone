@@ -35,11 +35,11 @@ const render = async () => {
     titleContainer.classList.add('div-title');
     // Find the object with the designated id.
     const serieLike = likes.find((obj) => obj.item_id === `${id}`);
-    console.log(serieLike)
+    const count = !serieLike ? 0 : serieLike.likes;
     titleContainer.innerHTML = `
       <h2>${title}</h2>
       <i class="fa-regular fa-heart"></i>
-      <span>${serieLike.likes} likes</span>
+      <span>${count} likes</span>
     `;
     icons.classList.add('span-icons');
     icons.innerHTML = `
