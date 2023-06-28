@@ -4,11 +4,8 @@ const getReservation = async (url) => {
   if (response.ok) {
     data = await response.json();
   }
-  else
-  console.log(response);
   return data;
 };
-
 
 const container = document.getElementById('popup');
 const reservpopup = async (showid = 98) => {

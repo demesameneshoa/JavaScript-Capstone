@@ -264,5 +264,5 @@ h1 {
 }
 
 .close-button {
-  max-width: fit-content;
+  max-width: 1rem;
 }
