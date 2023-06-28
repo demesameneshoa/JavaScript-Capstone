@@ -1,4 +1,5 @@
 import reservpopup from './reservation-popup.js';
+import { retrieveLikes } from './likes.js';
 
 const url = 'https://api.tvmaze.com/shows';
 
@@ -20,7 +21,7 @@ const render = async () => {
     .slice(0, 12);
 
   const tvShowsDiv = document.getElementById('tvShows');
-
+  const likes = await retrieveLikes();
   topTen.forEach((show) => {
     const poster = show.image ? show.image.medium : '';
     const title = show.name;
@@ -33,9 +34,15 @@ const render = async () => {
     showDiv.id = `${id}`;
     showDiv.classList.add('series');
     titleContainer.classList.add('div-title');
+    // Find the object with the designated id.
+    const serieLike = likes.find((obj) => obj.item_id === `${id}`);
+    const count = !serieLike ? 0 : serieLike.likes;
     titleContainer.innerHTML = `
       <h2>${title}</h2>
-      <i class="fa-regular fa-heart"></i>
+      <div class="likes-container">
+        <i class="fa-regular fa-heart"></i>
+        <span>${count} likes</span>
+      </div>
     `;
     icons.classList.add('span-icons');
     icons.innerHTML = `
