@@ -20,7 +20,7 @@ const renderpopup = async (showid = 98) => {
                  </li>
                  <li class="language normal">Language: ${data.language}</li>
                  <li class="rating normal">IMDb Rating: ${data.rating.average}</li>
-                 <li class="summary normal">Language: ${data.summary}</li>
+                 <li class="summary normal">Summary: ${data.summary}</li>
                </ul>
              </div>
            </div> 
