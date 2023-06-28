@@ -126,6 +126,19 @@ h1 {
   overflow-y: scroll;
 }
 
+.existingcomments {
+  background-color: #242424;
+  padding: 12px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.comment-box li {
+  list-style: disc;
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
 /* popup styling */
 
 #popup {
@@ -222,8 +235,6 @@ h1 {
   backdrop-filter: blur(10px);
   z-index: -1;
 }
-
-/* Comment popup end > */
 
 .forms {
   display: grid;
