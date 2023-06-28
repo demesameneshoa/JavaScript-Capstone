@@ -47,7 +47,7 @@ const renderpopup = async (showid = 98) => {
              </div>
              <div class="existingcomments">
                  <h2 class="heading">Comments()</h2>
-                 <ul>
+                 <ul class="comment-box">
                  ${comments.map((tag) => `<li><span class="tag">${tag.creation_date} ${`${tag.username}: ${tag.comment}`}</span></li>`).join('')}
                  </ul>
              </div>
