@@ -1,12 +1,15 @@
+// Take the API endpoint and retrives data. return retrived data
 const getData = async (url) => {
   const response = await fetch(url);
-  const data = await response.json();
+  let data = [];
+  if (response.ok) {
+    data = await response.json();
+  }
   return data;
 };
 
-// renderpopup takes the data from API and inject the popup templete with that data
+// renderpopup get the data from getData function and inject the popup templete with that data
 const renderpopup = async (showid = 98) => {
-  console.log(showid)
   const container = document.getElementById('comment-popup-container');
   const mainUrl = `https://api.tvmaze.com/shows/${showid}`;
   const involvementUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FjhFMUdws0lCxR3eXCdS/comments?item_id=${parseInt(showid, 10)}`;
