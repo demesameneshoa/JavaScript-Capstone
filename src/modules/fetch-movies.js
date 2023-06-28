@@ -38,8 +38,10 @@ const render = async () => {
     const count = !serieLike ? 0 : serieLike.likes;
     titleContainer.innerHTML = `
       <h2>${title}</h2>
-      <i class="fa-regular fa-heart"></i>
-      <span>${count} likes</span>
+      <div class="likes-container">
+        <i class="fa-regular fa-heart"></i>
+        <span>${count} likes</span>
+      </div>
     `;
     icons.classList.add('span-icons');
     icons.innerHTML = `
