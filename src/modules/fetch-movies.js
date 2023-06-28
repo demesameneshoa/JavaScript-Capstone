@@ -1,3 +1,4 @@
+import reservpopup from './reservation-popup.js';
 import { retrieveLikes } from './likes.js';
 
 const url = 'https://api.tvmaze.com/shows';
@@ -46,14 +47,22 @@ const render = async () => {
     icons.classList.add('span-icons');
     icons.innerHTML = `
       &nbsp; 
-      <button><i class="fa-regular fa-comment"></i> Comment</button>
+      <button class="comment-btn"><i class="fa-regular fa-comment"></i> Comment</button>
       &nbsp; 
-      <button><i class="fa-regular fa-clock"></i> Reserve</button>`;
+      <button id="reserve"><i class="fa-regular fa-clock"></i> Reserve</button>`;
 
     showDiv.appendChild(posterImg);
     showDiv.appendChild(titleContainer);
     showDiv.appendChild(icons);
     tvShowsDiv.appendChild(showDiv);
+  });
+  const reserveBtn = document.querySelectorAll('#reserve');
+  reserveBtn.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const showid = button.parentElement.parentElement.getAttribute('id');
+      reservpopup(showid);
+    });
   });
 };
 

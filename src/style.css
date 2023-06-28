@@ -101,3 +101,152 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
+
+/* < Comments popup start */
+
+.comment-popup-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 234234;
+}
+
+.comments-container {
+  width: 70%;
+  max-height: 100vh;
+  background-color: #171717;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: scroll;
+}
+
+/* popup styling */
+
+#popup {
+  align-items: center;
+  justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #111;
+}
+
+.reservation-container {
+  width: 50%;
+  margin: auto;
+  background-color: #f8f8f8;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #111;
+}
+
+.poster-container {
+  height: 300px;
+}
+
+.poster-container img {
+  height: 100%;
+}
+
+.details-container {
+  width: 100%;
+}
+
+.details-box {
+  width: 100%;
+  padding: 24px;
+  padding-top: 0;
+  line-height: 1.5;
+  height: 100%;
+}
+
+.details-box ul li {
+  list-style: disc;
+  margin-left: 14px;
+}
+
+.heading {
+  font-size: 32px;
+  padding: 2px 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 14px;
+}
+
+.normal {
+  font-size: 1rem;
+}
+
+.comments {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 12px;
+}
+
+.reservations {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.close {
+  cursor: pointer;
+  display: inline;
+  width: auto;
+}
+
+.blur {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+/* Comment popup end > */
+
+.forms {
+  display: grid;
+  flex-direction: column;
+}
+
+#closeBtn {
+  font-size: x-large;
+  cursor: pointer;
+}
+
+#reserve-button {
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#name,
+#startdate,
+#enddate {
+  height: 1.8rem;
+  margin-bottom: 0.5rem;
+  width: 14rem;
+}
