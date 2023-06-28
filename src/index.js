@@ -26,9 +26,9 @@ heartIcons.forEach((icon) => icon.addEventListener('click', (event) => {
 const commentBtns = document.querySelectorAll('.comment-btn');
 // Add event to comment button
 commentBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', async () => {
     const { id } = btn.parentElement.parentElement;
-    renderpopup(id);
+    await renderpopup(id);
   });
 });
 

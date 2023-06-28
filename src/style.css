@@ -141,6 +141,34 @@ h1 {
   margin-top: 8px;
 }
 
+.forms form {
+  margin-top: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #1111119e;
+  color: #f8f8f8;
+}
+
+.input::placeholder {
+  color: #f8f8f8;
+}
+
+.add-comment-btn {
+  border: none;
+  padding: 8px;
+  color: #111;
+  border-radius: 3px;
+}
+
+.add-comment-btn:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
 /* popup styling */
 
 #popup {
@@ -240,6 +268,10 @@ h1 {
 }
 
 .forms {
+  background-color: #242424;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  padding: 12px;
   display: grid;
   flex-direction: column;
 }

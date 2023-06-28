@@ -1,3 +1,4 @@
+import sendData from './send.js';
 // Take the API endpoint and retrives data. return retrived data
 const getData = async (url) => {
   const response = await fetch(url);
@@ -41,17 +42,17 @@ const renderpopup = async (showid = 98) => {
            </div> 
            <div class="comments">
              <div class="forms">
-               <h3> Add a Comment </h3>
+               <h3 class="heading"> Add a Comment </h3>
                <form>
-                   <input class="input" placeholder="Name" type="text" id="name"/> </br></br>
-                   <textarea placeholder="Comment" class="input" name="comment" id="comment" cols="30" rows="7"></textarea>
-                   <button>Comment</button>
+                   <input class="input username" placeholder="Name" type="text"/> </br></br>
+                   <textarea placeholder="Comment" class="input comment-message" name="comment" id="comment" cols="30" rows="7"></textarea>
+                   <button class="add-comment-btn">Comment</button>
                  </form>
              </div>
              <div class="existingcomments">
                  <h2 class="heading">Comments()</h2>
                  <ul class="comment-box">
-                 ${comments.map((tag) => `<li><span class="tag">${tag.creation_date} ${`${tag.username}: ${tag.comment}`}</span></li>`).join('')}
+                 ${comments.map((tag) => `<li id="${data.id}"><span class="tag">${tag.creation_date} ${`${tag.username}: ${tag.comment}`}</span></li>`).join('')}
                  </ul>
              </div>
          </div>
@@ -62,6 +63,21 @@ const renderpopup = async (showid = 98) => {
   const closeBtn = container.querySelector('.close');
   closeBtn.addEventListener('click', () => {
     container.innerHTML = '';
+  });
+
+  const addCommentBtn = document.querySelector('.add-comment-btn');
+
+  // Add event for add comment button
+
+  addCommentBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const nameElem = document.querySelector('.username');
+    const commentElem = document.querySelector('.comment-message');
+    const dataToSend = { item_id: data.id, username: nameElem.value, comment: commentElem.value };
+    await sendData(dataToSend);
+    await renderpopup(data.id);
+    nameElem.value = '';
+    commentElem.value = '';
   });
 };
 
