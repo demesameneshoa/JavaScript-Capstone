@@ -3,7 +3,6 @@ import render from './modules/fetch-movies.js';
 import logo from './assets/logo-white.png';
 import renderpopup from './modules/comment.js';
 import { countLikes } from './modules/likes.js';
-import sendData from './modules/send.js';
 
 document.getElementById('logo-img').setAttribute('src', logo);
 await render();
@@ -26,17 +25,6 @@ commentBtns.forEach((btn) => {
   btn.addEventListener('click', async () => {
     const { id } = btn.parentElement.parentElement;
     await renderpopup(id);
-    const addCommentBtn = document.querySelector('.add-comment-btn');
-    // Add event for add comment button
-    addCommentBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const nameElem = document.querySelector('.username');
-      const commentElem = document.querySelector('.comment-message');
-      const dataToSend = { item_id: id, username: nameElem.value, comment: commentElem.value };
-      sendData(dataToSend);
-      nameElem.value = '';
-      commentElem.value = '';
-    });
   });
 });
 

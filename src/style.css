@@ -148,6 +148,7 @@ h1 {
   padding: 8px;
   border: none;
   background-color: #1111119e;
+  color: #f8f8f8;
 }
 
 .input::placeholder {

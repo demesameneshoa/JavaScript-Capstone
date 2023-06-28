@@ -1,3 +1,4 @@
+import sendData from './send.js';
 // Take the API endpoint and retrives data. return retrived data
 const getData = async (url) => {
   const response = await fetch(url);
@@ -51,7 +52,7 @@ const renderpopup = async (showid = 98) => {
              <div class="existingcomments">
                  <h2 class="heading">Comments()</h2>
                  <ul class="comment-box">
-                 ${comments.map((tag) => `<li><span class="tag">${tag.creation_date} ${`${tag.username}: ${tag.comment}`}</span></li>`).join('')}
+                 ${comments.map((tag) => `<li id="${data.id}"><span class="tag">${tag.creation_date} ${`${tag.username}: ${tag.comment}`}</span></li>`).join('')}
                  </ul>
              </div>
          </div>
@@ -62,6 +63,21 @@ const renderpopup = async (showid = 98) => {
   const closeBtn = container.querySelector('.close');
   closeBtn.addEventListener('click', () => {
     container.innerHTML = '';
+  });
+
+  const addCommentBtn = document.querySelector('.add-comment-btn');
+
+  // Add event for add comment button
+
+  addCommentBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const nameElem = document.querySelector('.username');
+    const commentElem = document.querySelector('.comment-message');
+    const dataToSend = { item_id: data.id, username: nameElem.value, comment: commentElem.value };
+    await sendData(dataToSend);
+    await renderpopup(data.id);
+    nameElem.value = '';
+    commentElem.value = '';
   });
 };
 
