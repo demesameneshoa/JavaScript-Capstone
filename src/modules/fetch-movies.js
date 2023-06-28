@@ -40,7 +40,7 @@ const render = async () => {
     icons.classList.add('span-icons');
     icons.innerHTML = `
       &nbsp; 
-      <button><i class="fa-regular fa-comment"></i> Comment</button>
+      <button class="comment-btn"><i class="fa-regular fa-comment"></i> Comment</button>
       &nbsp; 
       <button id="reserve"><i class="fa-regular fa-clock"></i> Reserve</button>`;
 
