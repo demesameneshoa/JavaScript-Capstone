@@ -1,5 +1,17 @@
+const getReservation = async (url) => {
+  const response = await fetch(url);
+  let data = [];
+  if (response.ok) {
+    data = await response.json();
+  }
+  return data;
+};
+
 const container = document.getElementById('popup');
 const reservpopup = async (showid = 98) => {
+  const involvementUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FjhFMUdws0lCxR3eXCdS/reservations?item_id=${showid}`;
+  // Fetch data from API
+  const comments = await getReservation(involvementUrl);
   await fetch(`https://api.tvmaze.com/shows/${showid}`)
     .then((response) => response.json())
     .then((data) => {
@@ -35,9 +47,10 @@ const reservpopup = async (showid = 98) => {
                   </form>
               </div>
               <div class="existing-reservations">
-                  <h3>Reservations (2)</h3>
-                  <p>Alex Start Date: 10/10/23 End Date:12/10/23</p>
-                  <p>Alex Start Date: 10/10/23 End Date:12/10/23</p>
+                  <h3>Reservations ()</h3>
+                  <ul class="comment-box">
+                 ${comments.map((tag) => `<li><span class="tag">${`${tag.date_start} to ${tag.date_end} by ${tag.username} `}</span></li>`).join('')}
+                 </ul>
               </div>
           </div>
           </div>`;
