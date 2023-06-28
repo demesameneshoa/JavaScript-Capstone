@@ -4,6 +4,7 @@ import logo from './assets/logo-white.png';
 import renderpopup from './modules/comment.js';
 import { countLikes } from './modules/likes.js';
 import itemsCounter from './modules/items-counter.js';
+import { showMobileMenu, hideMobileMenu } from './modules/mobile-menu.js';
 
 document.getElementById('logo-img').setAttribute('src', logo);
 await render();
@@ -33,3 +34,10 @@ commentBtns.forEach((btn) => {
 });
 
 // Comment popup end >
+
+// Mobile menu
+const hamburgerIcon = document.getElementById('hamburguer');
+const closeIcon = document.querySelector('.fa-x');
+
+hamburgerIcon.addEventListener('click', showMobileMenu);
+closeIcon.addEventListener('click', hideMobileMenu);
