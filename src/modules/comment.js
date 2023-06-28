@@ -41,11 +41,11 @@ const renderpopup = async (showid = 98) => {
            </div> 
            <div class="comments">
              <div class="forms">
-               <h3> Add a Comment </h3>
+               <h3 class="heading"> Add a Comment </h3>
                <form>
-                   <input class="input" placeholder="Name" type="text" id="name"/> </br></br>
+                   <input class="input" placeholder="Name" type="text"/> </br></br>
                    <textarea placeholder="Comment" class="input" name="comment" id="comment" cols="30" rows="7"></textarea>
-                   <button>Comment</button>
+                   <button class="addCommentBtn">Comment</button>
                  </form>
              </div>
              <div class="existingcomments">
