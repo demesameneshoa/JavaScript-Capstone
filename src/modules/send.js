@@ -1,5 +1,4 @@
-const sendData = async (data, itemID) => {
-  console.log(itemID)
+const sendData = async (data) => {
   const dataToSend = JSON.stringify(data);
   const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FjhFMUdws0lCxR3eXCdS/comments';
   await fetch(url, {
@@ -7,9 +6,7 @@ const sendData = async (data, itemID) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: {
-      dataToSend,
-    },
+    body: dataToSend,
   });
 };
 

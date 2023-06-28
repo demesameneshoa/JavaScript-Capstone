@@ -30,14 +30,14 @@ commentBtns.forEach((btn) => {
     // Add event for add comment button
     addCommentBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const username = document.querySelector('.username');
-      const comment = document.querySelector('.comment-message');
-      const dataToSend = { id, username, comment };
-      sendData(dataToSend, id);
+      const nameElem = document.querySelector('.username');
+      const commentElem = document.querySelector('.comment-message');
+      const dataToSend = { item_id: id, username: nameElem.value, comment: commentElem.value };
+      sendData(dataToSend);
+      nameElem.value = '';
+      commentElem.value = '';
     });
   });
 });
-
-
 
 // Comment popup end >
