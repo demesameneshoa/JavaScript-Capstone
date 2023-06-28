@@ -213,6 +213,7 @@ h1 {
 .reservations {
   display: grid;
   grid-template-columns: auto auto;
+  gap: 0.8rem;
 }
 
 .info-wrapper {
