@@ -62,6 +62,14 @@ h1 {
   cursor: pointer;
 }
 
+#hamburguer {
+  display: none;
+  position: absolute;
+  top: 2%;
+  left: 7%;
+  font-size: 2em;
+}
+
 #nav-list {
   display: flex;
   gap: 30px;
@@ -279,5 +287,15 @@ h1 {
 @media only screen and (max-width: 680px) {
   #tvShows {
     grid-template-columns: repeat(1, 90%);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header {
+    display: none;
+  }
+
+  #hamburguer {
+    display: block;
   }
 }
