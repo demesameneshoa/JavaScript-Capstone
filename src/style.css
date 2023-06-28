@@ -189,7 +189,8 @@ h1 {
   display: grid;
   grid-template-columns: auto auto;
   gap: 12px;
-  }
+}
+
 .reservations {
   display: grid;
   grid-template-columns: auto auto;
