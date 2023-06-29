@@ -5,6 +5,7 @@ import renderpopup from './modules/comment.js';
 import { countLikes } from './modules/likes.js';
 import itemsCounter from './modules/items-counter.js';
 import { showMobileMenu, hideMobileMenu } from './modules/mobile-menu.js';
+import getCommentsCount from './modules/comments-counter.js';
 
 document.getElementById('logo-img').setAttribute('src', logo);
 await render();
@@ -28,11 +29,16 @@ heartIcons.forEach((icon) => icon.addEventListener('click', (event) => {
 
 // < Comment popup start
 const commentBtns = document.querySelectorAll('.comment-btn');
+
 // Add event to comment button
 commentBtns.forEach((btn) => {
   btn.addEventListener('click', async () => {
     const { id } = btn.parentElement.parentElement;
     await renderpopup(id);
+
+    const commentsCountCon = document.querySelector('.commentsCount');
+
+    commentsCountCon.textContent = `(${getCommentsCount()})`;
   });
 });
 
