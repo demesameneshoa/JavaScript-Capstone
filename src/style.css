@@ -89,6 +89,22 @@ h1 {
   }
 }
 
+.animation-comment {
+  animation-name: comment;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes comment {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
 #mobile-menu {
   position: fixed;
   top: 0;
