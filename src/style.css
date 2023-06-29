@@ -223,6 +223,34 @@ h1 {
   margin-top: 8px;
 }
 
+.forms form {
+  margin-top: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #1111119e;
+  color: #f8f8f8;
+}
+
+.input::placeholder {
+  color: #f8f8f8;
+}
+
+.add-comment-btn {
+  border: none;
+  padding: 8px;
+  color: #111;
+  border-radius: 3px;
+}
+
+.add-comment-btn:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
 /* popup styling */
 
 #popup {
@@ -244,12 +272,12 @@ h1 {
 .reservation-container {
   width: 50%;
   margin: auto;
-  background-color: #f8f8f8;
+  background-color: #171717;
   padding: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  color: #111;
+  color: #fff;
 }
 
 .poster-container {
@@ -297,6 +325,7 @@ h1 {
 .reservations {
   display: grid;
   grid-template-columns: auto auto;
+  gap: 0.8rem;
 }
 
 .info-wrapper {
@@ -321,6 +350,10 @@ h1 {
 }
 
 .forms {
+  background-color: #242424;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  padding: 12px;
   display: grid;
   flex-direction: column;
 }
@@ -413,4 +446,7 @@ h1 {
   #hamburguer {
     display: none;
   }
+
+.close-button {
+  max-width: 1rem;
 }
