@@ -4,18 +4,22 @@ import logo from './assets/logo-white.png';
 import renderpopup from './modules/comment.js';
 import { countLikes } from './modules/likes.js';
 import itemsCounter from './modules/items-counter.js';
-import getCommentsCount from './modules/comments-counter';
+import { showMobileMenu, hideMobileMenu } from './modules/mobile-menu.js';
+import getCommentsCount from './modules/comments-counter.js';
 
 document.getElementById('logo-img').setAttribute('src', logo);
 await render();
 
 const heartIcons = document.querySelectorAll('.fa-heart');
-const spanItems = document.getElementById('items-count');
+const spanItems = document.querySelectorAll('.items-count');
 // Add the number of items in the span.
-spanItems.textContent = ` (${itemsCounter()})`;
+spanItems.forEach((span) => {
+  span.textContent = ` (${itemsCounter()})`;
+});
 
 heartIcons.forEach((icon) => icon.addEventListener('click', (event) => {
   countLikes(event);
+  event.target.classList.add('animation-heart');
   // Selects the span element next to the icon.
   const span = event.target.nextElementSibling;
   // Retrieves the number of likes and increment it by 1.
@@ -39,3 +43,10 @@ commentBtns.forEach((btn) => {
 });
 
 // Comment popup end >
+
+// Mobile menu
+const hamburgerIcon = document.getElementById('hamburguer');
+const closeIcon = document.querySelector('.fa-x');
+
+hamburgerIcon.addEventListener('click', showMobileMenu);
+closeIcon.addEventListener('click', hideMobileMenu);

@@ -22,7 +22,7 @@ const renderpopup = async (showid = 98) => {
   // Templete for the comment popup
   container.innerHTML = `
         <div class="blur"></div>
-       <div class="comments-container">
+       <div class="comments-container animation-comment">
           <div><i class="fa-solid close fa-xmark"></i></div>
          <div class=info-wrapper>
          <div class="poster-container">

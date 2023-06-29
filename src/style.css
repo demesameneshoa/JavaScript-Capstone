@@ -62,6 +62,88 @@ h1 {
   cursor: pointer;
 }
 
+.hide {
+  display: none;
+}
+
+.animation-heart {
+  animation-name: heart;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  color: red;
+}
+
+@keyframes heart {
+  from {
+    color: white;
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  to {
+    color: red;
+    transform: scale(1);
+  }
+}
+
+.animation-comment {
+  animation-name: comment;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes comment {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 90%;
+  height: 100%;
+  padding: 20px 40px;
+  font-size: 2em;
+  animation-name: mobile-menu;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+#mobile-menu i {
+  font-size: 0.9em;
+}
+
+.mobile-items {
+  margin-top: 20px;
+}
+
+@keyframes mobile-menu {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+#hamburguer {
+  position: absolute;
+  top: 2%;
+  left: 7%;
+  font-size: 2em;
+}
+
 #nav-list {
   display: flex;
   gap: 30px;
@@ -297,6 +379,75 @@ h1 {
   width: 14rem;
 }
 
-.close-button {
-  max-width: 1rem;
+@media only screen and (max-width: 1440px) {
+  #tvShows {
+    grid-template-columns: repeat(3, 30%);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #tvShows {
+    grid-template-columns: repeat(2, 45%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .comments-container {
+    width: 90%;
+  }
+
+  .info-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comments {
+    grid-template-columns: auto;
+  }
+
+  .forms {
+    order: 1;
+  }
+
+  .reservation-container {
+    width: 90%;
+  }
+
+  .reservations {
+    grid-template-columns: auto;
+  }
+
+  #popup {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #tvShows {
+    grid-template-columns: repeat(1, 90%);
+  }
+}
+
+@media only screen and (min-width: 430px) {
+  #hamburguer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header {
+    display: none;
+  }
+
+  #hamburguer.hide {
+    display: block;
+  }
+
+  #hamburguer {
+    display: none;
+  }
+
+  .close-button {
+    max-width: 1rem;
+  }
 }

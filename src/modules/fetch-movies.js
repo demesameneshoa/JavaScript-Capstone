@@ -40,7 +40,7 @@ const render = async () => {
     titleContainer.innerHTML = `
       <h2>${title}</h2>
       <div class="likes-container">
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-heart"></i>
         <span>${count} likes</span>
       </div>
     `;
