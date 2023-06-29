@@ -50,9 +50,9 @@ const renderpopup = async (showid = 98) => {
                  </form>
              </div>
              <div class="existingcomments">
-                 <h2 class="heading">Comments()</h2>
+                 <h2 class="heading">Comments<span class="commentsCount"></span></h2>
                  <ul class="comment-box">
-                 ${comments.map((tag) => `<li id="${data.id}"><span class="tag">${tag.creation_date} ${`${tag.username}: ${tag.comment}`}</span></li>`).join('')}
+                 ${comments.map((tag) => `<li id="${data.id}"><span class="comment-item">${tag.creation_date} ${`${tag.username}: ${tag.comment}`}</span></li>`).join('')}
                  </ul>
              </div>
          </div>
