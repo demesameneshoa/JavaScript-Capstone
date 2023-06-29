@@ -62,8 +62,11 @@ h1 {
   cursor: pointer;
 }
 
-#mobile-menu {
+.hide {
   display: none;
+}
+
+#mobile-menu {
   position: fixed;
   top: 0;
   z-index: 999;
@@ -96,7 +99,6 @@ h1 {
 }
 
 #hamburguer {
-  display: none;
   position: absolute;
   top: 2%;
   left: 7%;
@@ -354,12 +356,22 @@ h1 {
   }
 }
 
+@media only screen and (min-width: 430px) {
+  #hamburguer {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 425px) {
   header {
     display: none;
   }
 
-  #hamburguer {
+  #hamburguer.hide {
     display: block;
+  }
+
+  #hamburguer {
+    display: none;
   }
 }
