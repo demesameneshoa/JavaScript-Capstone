@@ -4,7 +4,7 @@ const reservpopup = async (showid = 98) => {
     .then((response) => response.json())
     .then((data) => {
       container.innerHTML = `
-        <div class="reservation-container">
+        <div class="reservation-container animation-comment">
         <span id="closeBtn" class="close-button">&times;</span>
           <div class=info-wrapper>
           <div class="poster-container">
