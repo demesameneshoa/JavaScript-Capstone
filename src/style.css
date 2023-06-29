@@ -438,7 +438,7 @@ h1 {
   header {
     display: none;
   }
-
+}
   #hamburguer.hide {
     display: block;
   }
