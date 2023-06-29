@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import getCommentsCount from './modules/comments-counter.js';
+import getCommentsCount from '../modules/comments-counter.js';
 
 describe('Comments counter', () => {
   test('The function should return 0 for no comment', () => {

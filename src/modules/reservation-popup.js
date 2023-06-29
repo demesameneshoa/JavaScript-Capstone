@@ -1,4 +1,4 @@
-import getCount from '../reservation-counter.js';
+import getCount from './reservation-counter.js';
 
 const getReservation = async (url) => {
   const response = await fetch(url);

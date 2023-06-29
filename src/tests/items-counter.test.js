@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import itemsCounter from './modules/items-counter.js';
+import itemsCounter from '../modules/items-counter.js';
 
 describe('Items Count', () => {
   test('0 for no items', () => {

@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import getCount from './reservation-counter.js';
+import getCount from '../modules/reservation-counter.js';
 
 describe('Reservation Count Test', () => {
   // testing with no reservations
