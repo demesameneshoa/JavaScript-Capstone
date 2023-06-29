@@ -72,7 +72,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- <a href="https://demesameneshoa.github.io/to-do-list/">Click Here</a> to see the live demo
+- <a href="https://demesameneshoa.github.io/JavaScript-Capstone/">Click Here</a> to see the live demo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,7 +101,7 @@ Example commands:
   git clone git@github.com:demesameneshoa/JavaScript-Capstone.git
 ```
 
-### Insatll <a name="install">
+### Install <a name="install">
 
 Install webpack and its associated tools as dev dependencies by running the following command
 Make sure to install jest-dom to execute the testing.
@@ -109,6 +109,16 @@ Make sure to install jest-dom to execute the testing.
 ```
 npm install
 npm install jest-dom
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Usage <a name="install">
+
+Initialize it with:
+
+```
+npm start
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -162,6 +172,7 @@ If you like this project please show us support by givintg it a star.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank my colleagues at Microverse for their support during the project.
+Additionally, thanks to [TVMaze API](https://www.tvmaze.com/api) for their great working API.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
