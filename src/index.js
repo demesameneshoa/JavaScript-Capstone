@@ -32,9 +32,9 @@ commentBtns.forEach((btn) => {
     const { id } = btn.parentElement.parentElement;
     await renderpopup(id);
 
-    const commentsCountCon = document.querySelector('.commentsCount')
+    const commentsCountCon = document.querySelector('.commentsCount');
 
-    commentsCountCon.textContent = `(${getCommentsCount()})`; 
+    commentsCountCon.textContent = `(${getCommentsCount()})`;
   });
 });
 
