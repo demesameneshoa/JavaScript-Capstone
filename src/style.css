@@ -334,6 +334,18 @@ h1 {
   .forms {
     order: 1;
   }
+
+  .reservation-container {
+    width: 90%;
+  }
+
+  .reservations {
+    grid-template-columns: auto;
+  }
+
+  #popup {
+    padding-top: 0;
+  }
 }
 
 @media only screen and (max-width: 680px) {
