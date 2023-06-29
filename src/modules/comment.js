@@ -1,4 +1,6 @@
 import sendData from './send.js';
+import getCommentsCount from './comments-counter.js';
+
 // Take the API endpoint and retrives data. return retrived data
 const getData = async (url) => {
   const response = await fetch(url);
@@ -50,9 +52,9 @@ const renderpopup = async (showid = 98) => {
                  </form>
              </div>
              <div class="existingcomments">
-                 <h2 class="heading">Comments()</h2>
+                 <h2 class="heading">Comments<span class="commentsCount"></span></h2>
                  <ul class="comment-box">
-                 ${comments.map((tag) => `<li id="${data.id}"><span class="tag">${tag.creation_date} ${`${tag.username}: ${tag.comment}`}</span></li>`).join('')}
+                 ${comments.map((tag) => `<li id="${data.id}"><span class="comment-item">${tag.creation_date} ${`${tag.username}: ${tag.comment}`}</span></li>`).join('')}
                  </ul>
              </div>
          </div>
@@ -78,6 +80,10 @@ const renderpopup = async (showid = 98) => {
     await renderpopup(data.id);
     nameElem.value = '';
     commentElem.value = '';
+
+    const commentsCountCon = document.querySelector('.commentsCount');
+
+    commentsCountCon.textContent = `(${getCommentsCount()})`;
   });
 };
 
