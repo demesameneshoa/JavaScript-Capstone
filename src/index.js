@@ -18,6 +18,7 @@ spanItems.forEach((span) => {
 
 heartIcons.forEach((icon) => icon.addEventListener('click', (event) => {
   countLikes(event);
+  event.target.classList.add('animation-heart');
   // Selects the span element next to the icon.
   const span = event.target.nextElementSibling;
   // Retrieves the number of likes and increment it by 1.
