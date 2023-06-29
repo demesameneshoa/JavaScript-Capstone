@@ -1,3 +1,4 @@
+import getCount from "../reservation-counter.js";
 const getReservation = async (url) => {
   const response = await fetch(url);
   let data = [];
@@ -6,7 +7,6 @@ const getReservation = async (url) => {
   }
   return data;
 };
-
 let addReservation;
 const container = document.getElementById('popup');
 const reservpopup = async (showid = 98) => {
@@ -48,13 +48,17 @@ const reservpopup = async (showid = 98) => {
                   </form>
               </div>
               <div class="existing-reservations">
-                  <h3>Reservations ()</h3>
+                  <h3 id="reservation-header"></h3>
                   <ul class="comment-box">
                  ${reservations.map((reservation) => `<li><span class="tag">${`${reservation.date_start} to ${reservation.date_end} by ${reservation.username} `}</span></li>`).join('')}
                  </ul>
               </div>
           </div>
           </div>`;
+      //count reservation tags and display in h3 header
+      const reservationCount = getCount();
+      const reservationTitle= document.getElementById("reservation-header");
+      reservationTitle.innerText=(`Reservations (${reservationCount})`);
       container.style.display = 'block';
     });
   const closeBtn = document.getElementById('closeBtn');
@@ -92,4 +96,7 @@ addReservation = async (url, showid, user, startDate, endDate) => {
   reservpopup(showid);
 };
 
-export default reservpopup;
+export {
+  reservpopup,
+  getReservation
+} ;
