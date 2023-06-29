@@ -438,7 +438,7 @@ h1 {
   header {
     display: none;
   }
-}
+
   #hamburguer.hide {
     display: block;
   }
@@ -447,6 +447,7 @@ h1 {
     display: none;
   }
 
-.close-button {
-  max-width: 1rem;
+  .close-button {
+    max-width: 1rem;
+  }
 }
