@@ -81,7 +81,7 @@ const renderpopup = async (showid = 98) => {
     nameElem.value = '';
     commentElem.value = '';
 
-    const commentsCountCon = document.querySelector('.commentsCount')
+    const commentsCountCon = document.querySelector('.commentsCount');
 
     commentsCountCon.textContent = `(${getCommentsCount()})`;
   });
