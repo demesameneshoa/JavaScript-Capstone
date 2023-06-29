@@ -1,4 +1,6 @@
 import sendData from './send.js';
+import getCommentsCount from './comments-counter.js';
+
 // Take the API endpoint and retrives data. return retrived data
 const getData = async (url) => {
   const response = await fetch(url);
@@ -78,6 +80,10 @@ const renderpopup = async (showid = 98) => {
     await renderpopup(data.id);
     nameElem.value = '';
     commentElem.value = '';
+
+    const commentsCountCon = document.querySelector('.commentsCount')
+
+    commentsCountCon.textContent = `(${getCommentsCount()})`;
   });
 };
 
