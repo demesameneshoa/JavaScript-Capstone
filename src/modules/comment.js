@@ -75,15 +75,17 @@ const renderpopup = async (showid = 98) => {
     e.preventDefault();
     const nameElem = document.querySelector('.username');
     const commentElem = document.querySelector('.comment-message');
-    const dataToSend = { item_id: data.id, username: nameElem.value, comment: commentElem.value };
-    await sendData(dataToSend);
-    await renderpopup(data.id);
-    nameElem.value = '';
-    commentElem.value = '';
+    if (nameElem.value !== '' && commentElem.value !== '') {
+      const dataToSend = { item_id: data.id, username: nameElem.value, comment: commentElem.value };
+      await sendData(dataToSend);
+      await renderpopup(data.id);
+      nameElem.value = '';
+      commentElem.value = '';
 
-    const commentsCountCon = document.querySelector('.commentsCount');
+      const commentsCountCon = document.querySelector('.commentsCount');
 
-    commentsCountCon.textContent = `(${getCommentsCount()})`;
+      commentsCountCon.textContent = `(${getCommentsCount()})`;
+    }
   });
 };
 
