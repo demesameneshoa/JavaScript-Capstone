@@ -30,7 +30,11 @@ const commentBtns = document.querySelectorAll('.comment-btn');
 commentBtns.forEach((btn) => {
   btn.addEventListener('click', async () => {
     const { id } = btn.parentElement.parentElement;
-    await renderpopup(id); 
+    await renderpopup(id);
+
+    const commentsCountCon = document.querySelector('.commentsCount')
+
+    commentsCountCon.textContent = `(${getCommentsCount()})`; 
   });
 });
 
