@@ -435,16 +435,13 @@ h1 {
 }
 
 @media only screen and (max-width: 425px) {
-  header {
+  header,
+  #hamburguer {
     display: none;
   }
 
   #hamburguer.hide {
     display: block;
-  }
-
-  #hamburguer {
-    display: none;
   }
 
   .close-button {
