@@ -14,4 +14,19 @@ describe('Comments counter', () => {
 
     expect(commentsNumber).toBe(0);
   });
+
+  test('Should return 5 for 5 elements', () => {
+    document.body.innerHTML = `
+      <ul class="comment-box">
+        <li><span class="comment-item"></span></li>
+        <li><span class="comment-item"></span></li>
+        <li><span class="comment-item"></span></li>
+        <li><span class="comment-item"></span></li>
+        <li><span class="comment-item"></span></li>
+      </ul>
+    `;
+
+    const commentsNumber = getCommentsCount();
+    expect(commentsNumber).toBe(5);
+  });
 });
