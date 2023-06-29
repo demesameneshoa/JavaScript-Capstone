@@ -1,4 +1,5 @@
-import getCount from "../reservation-counter.js";
+import getCount from '../reservation-counter.js';
+
 const getReservation = async (url) => {
   const response = await fetch(url);
   let data = [];
@@ -55,10 +56,10 @@ const reservpopup = async (showid = 98) => {
               </div>
           </div>
           </div>`;
-      //count reservation tags and display in h3 header
+      // count reservation tags and display in h3 header
       const reservationCount = getCount();
-      const reservationTitle= document.getElementById("reservation-header");
-      reservationTitle.innerText=(`Reservations (${reservationCount})`);
+      const reservationTitle = document.getElementById('reservation-header');
+      reservationTitle.innerText = (`Reservations (${reservationCount})`);
       container.style.display = 'block';
     });
   const closeBtn = document.getElementById('closeBtn');
@@ -98,5 +99,5 @@ addReservation = async (url, showid, user, startDate, endDate) => {
 
 export {
   reservpopup,
-  getReservation
-} ;
+  getReservation,
+};

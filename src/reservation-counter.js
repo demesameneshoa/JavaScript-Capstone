@@ -1,6 +1,6 @@
 const getCount = () => {
-    const tagCount = document.querySelectorAll(".tag");
-    return tagCount.length;   
-  }
+  const tagCount = document.querySelectorAll('.tag');
+  return tagCount.length;
+};
 
- export default getCount;
+export default getCount;

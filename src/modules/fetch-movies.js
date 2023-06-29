@@ -1,4 +1,4 @@
-import {reservpopup} from './reservation-popup.js';
+import { reservpopup } from './reservation-popup.js';
 import { retrieveLikes } from './likes.js';
 
 const url = 'https://api.tvmaze.com/shows';
