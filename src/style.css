@@ -1,0 +1,450 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 5px 5px black;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: linear-gradient(60deg, #808080 50%, #111 50%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+h1 {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.series img {
+  border-radius: 10px;
+  width: 250px;
+}
+
+.div-title i {
+  font-size: 1.2em;
+}
+
+.div-title i:hover {
+  cursor: pointer;
+}
+
+.span-icons button {
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.span-icons button:hover {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.animation-heart {
+  animation-name: heart;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  color: red;
+}
+
+@keyframes heart {
+  from {
+    color: white;
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  to {
+    color: red;
+    transform: scale(1);
+  }
+}
+
+.animation-comment {
+  animation-name: comment;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes comment {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 90%;
+  height: 100%;
+  padding: 20px 40px;
+  font-size: 2em;
+  animation-name: mobile-menu;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+#mobile-menu i {
+  font-size: 0.9em;
+}
+
+.mobile-items {
+  margin-top: 20px;
+}
+
+@keyframes mobile-menu {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+#hamburguer {
+  position: absolute;
+  top: 2%;
+  left: 7%;
+  font-size: 2em;
+}
+
+#nav-list {
+  display: flex;
+  gap: 30px;
+}
+
+#tvShows {
+  display: grid;
+  grid-template-columns: repeat(4, 22%);
+  gap: 2rem;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 50px;
+}
+
+.series,
+.span-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.span-icons {
+  align-items: center;
+}
+
+#logo-img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.likes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* < Comments popup start */
+
+.comment-popup-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 234234;
+}
+
+.comments-container {
+  width: 70%;
+  max-height: 100vh;
+  background-color: #171717;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: scroll;
+}
+
+.existingcomments {
+  background-color: #242424;
+  padding: 12px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.comment-box li {
+  list-style: disc;
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+.forms form {
+  margin-top: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #1111119e;
+  color: #f8f8f8;
+}
+
+.input::placeholder {
+  color: #f8f8f8;
+}
+
+.add-comment-btn {
+  border: none;
+  padding: 8px;
+  color: #111;
+  border-radius: 3px;
+}
+
+.add-comment-btn:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+/* popup styling */
+
+#popup {
+  align-items: center;
+  justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #111;
+}
+
+.reservation-container {
+  width: 50%;
+  margin: auto;
+  background-color: #171717;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #fff;
+}
+
+.poster-container {
+  height: 300px;
+}
+
+.poster-container img {
+  height: 100%;
+}
+
+.details-container {
+  width: 100%;
+}
+
+.details-box {
+  width: 100%;
+  padding: 24px;
+  padding-top: 0;
+  line-height: 1.5;
+  height: 100%;
+}
+
+.details-box ul li {
+  list-style: disc;
+  margin-left: 14px;
+}
+
+.heading {
+  font-size: 32px;
+  padding: 2px 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 14px;
+}
+
+.normal {
+  font-size: 1rem;
+}
+
+.comments {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 12px;
+}
+
+.reservations {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.8rem;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.close {
+  cursor: pointer;
+  display: inline;
+  width: auto;
+}
+
+.blur {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+.forms {
+  background-color: #242424;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  padding: 12px;
+  display: grid;
+  flex-direction: column;
+}
+
+#closeBtn {
+  font-size: x-large;
+  cursor: pointer;
+}
+
+#reserve-button {
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#name,
+#startdate,
+#enddate {
+  height: 1.8rem;
+  margin-bottom: 0.5rem;
+  width: 14rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  #tvShows {
+    grid-template-columns: repeat(3, 30%);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #tvShows {
+    grid-template-columns: repeat(2, 45%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .comments-container {
+    width: 90%;
+  }
+
+  .info-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comments {
+    grid-template-columns: auto;
+  }
+
+  .forms {
+    order: 1;
+  }
+
+  .reservation-container {
+    width: 90%;
+  }
+
+  .reservations {
+    grid-template-columns: auto;
+  }
+
+  #popup {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #tvShows {
+    grid-template-columns: repeat(1, 90%);
+  }
+}
+
+@media only screen and (min-width: 430px) {
+  #hamburguer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header,
+  #hamburguer {
+    display: none;
+  }
+
+  #hamburguer.hide {
+    display: block;
+  }
+
+  .close-button {
+    max-width: 1rem;
+  }
+}
